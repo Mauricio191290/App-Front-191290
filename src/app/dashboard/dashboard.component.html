@@ -1,0 +1,18 @@
+<div style="text-align: center;">
+    <h1>
+        Andamos en el Dashboard {{tittle}}
+    </h1>
+
+    <div *ngFor='let user of users'>
+        <img [src]='user.picture.medium'>
+        <h1> Gender: {{user.gender}} </h1>
+        <h2> Name: {{ user.name.first }} {{ user.name.last }}  </h2>
+        <h4> City: {{ user.location.city }} </h4>
+        <h3> Street & number: {{ user.location.street.name  }} {{ user.location.street.number  }}  </h3>
+        <h4> Postcode: {{ user.location.postcode }} </h4>
+        <h3> Email: {{ user.email }} </h3>
+        <p> Phone: {{ user.phone }} </p>
+        <p> Registered: {{ user.registered.date }}  {{ user.registered.age }}</p>
+
+    </div>
+</div>
